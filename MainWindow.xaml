@@ -1,0 +1,28 @@
+﻿<Window x:Class="PM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions >
+            <RowDefinition />
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        
+        <ContentControl Grid.Row="0" Grid.ColumnSpan="4" x:Name="contentControl" />
+        <Button Grid.Row="1" Grid.Column="0" x:Name="projectsList" Content="Project Items" Margin="12,12,6,12" Width="Auto" Height="Auto" Click="projectsList_Click"/>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="mergeFile" Content="Merge Files" Margin="6,12,6,12" Width="Auto" Height="Auto" Click="mergeFiles_Click"/>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="beaconSpecs" Content="LBeacon Specifications" Margin="6,12,6,12" Width="Auto" Height="Auto" Click="beaconSpecs_Click"/>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="beaconIpAddress" Content="Beacon IP Address" Margin="6,12,12,12" Width="Auto" Height="Auto" Click="beaconIpAddress_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="PM.BeaconIpAddress"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PM"
+             mc:Ignorable="d">
+
+    <Grid Margin="6,0,6,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="3*" />
+            <!--<ColumnDefinition Width="1*" />-->
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Project" Height="Auto" Width="Auto" FontSize="18" FontFamily="Calibri" FontWeight="Bold" />
+        <ComboBox Grid.Row="0" Grid.Column="1" Height="Auto" Width="Auto" SelectedItem ="0" Name="projectSelect" VerticalAlignment="Center" Loaded="projectSelect_Loaded" SelectionChanged="projectSelect_SelectionChanged" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Gateway" Height="Auto" Width="Auto" FontSize="18" FontFamily="Calibri" FontWeight="Bold" />
+        <ComboBox Grid.Row="1" Grid.Column="1" Height="Auto" Width="Auto" SelectedItem ="0" Name="gatewaySelect" VerticalAlignment="Center" SelectionChanged="OnGatewaySelected" />
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="6,0,0,0" Name="beaconsInGateway" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="18" />
+
+        <Label Grid.Row="3" Grid.Column="0" Content="Beacon IP" Height="Auto" Width="Auto" FontSize="18" FontFamily="Calibri" FontWeight="Bold" />
+        <ComboBox Grid.Row="3" Grid.Column="1" Height="Auto" Width="Auto" SelectedItem ="0" Name="beaconIpSelect" VerticalAlignment="Center" SelectionChanged="OnBeaconSelected" />
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="6,0,0,0" Name="beaconIp" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" FontSize="18" />
+
+        <!--<Border Grid.Row="0" Grid.Column="2" Grid.RowSpan="5" Margin="12,6,12,0" Background="GhostWhite" BorderBrush="Gainsboro" BorderThickness="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.ColumnSpan="2" Content="New Beacon IP" FontSize="18" FontFamily="Calibri" FontWeight="Bold" />
+                <Label Grid.Row="1" Grid.Column="0" Content="Gateway" FontSize="18" FontFamily="Calibri" FontWeight="Bold" />
+                <ComboBox Grid.Row="1" Grid.Column="1" Height="Auto" Width="Auto" SelectedItem ="0" Name="gatewaySelect2" VerticalAlignment="Center" Margin="0,0,6,0" />
+
+                <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Margin="6,0,6,0" />
+                
+                <Button Grid.Row="3" Grid.Column="0" Content="Add Beacon" Margin="6,6,0,0"></Button>
+                <ListBox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="6" />
+            </Grid>
+        </Border>-->
+    </Grid>
+</UserControl>
